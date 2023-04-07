@@ -174,14 +174,18 @@ header {
 }
 
 .header-link-caveat summary {
-    list-style-type: none !important;
+    list-style-type: none;
     position: relative;
+}
+
+.header-link-caveat summary::-webkit-details-marker {
+    display: none;
 }
 
 .header-link-caveat summary img {
     width: 20px;
     height: 30px;
-    padding-top: 10px;
+    padding-top: 10px;   
 }
 
 .speech_bubble_table {
@@ -193,14 +197,14 @@ header {
     flex-direction: column;
     position: absolute;
     right: 50px;
-    width: 350px;
+    width: 270px;
     height: 160px;
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 
 .speech_bubble_table span {
-    font-size: 13px;
+    font-size: 12px;
     width: auto;
 }
 
@@ -210,6 +214,11 @@ header {
     border-radius: 30px;
     background-color: #edf2f7;
     border: 2px solid #edf2f7;
+}
+
+.header-link-like a {
+    width: 20px;
+    height: 20px;
 }
 
 .header-link-like img {
@@ -454,6 +463,10 @@ hr {
     display: flex;
     justify-content: right;
     list-style-type: none;
+}
+
+.link-caveat summary::-webkit-details-marker {
+    display: none;
 }
 
 .link-caveat img {
