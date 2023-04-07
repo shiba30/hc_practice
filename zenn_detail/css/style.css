@@ -1029,10 +1029,14 @@ footer {
     font-size: 14px;
 }
 
+.fotter-nav ul {
+    margin: 12px;
+}
+
 .fotter-nav li {
-    min-width: 100%;
+    min-width: 50%;
     display: inline-block;
-    padding: 0 80px 10px 0;
+    padding-bottom: 20px;
 }
 
 .copyright {
@@ -1129,6 +1133,7 @@ footer {
 
     .fotter-nav ul {
         width: 35%;
+        margin: 0;
     }
 
     .related-article-list-container {
@@ -1149,5 +1154,13 @@ footer {
 
     .header-container-width {
         padding: 0 20px;
+    }
+
+    .main_container {
+        padding: 0 20px;
+    }
+
+    .main_content {
+        margin: 0 -20px;
     }
 }
