@@ -174,18 +174,14 @@ header {
 }
 
 .header-link-caveat summary {
-    list-style-type: none;
+    color: transparent;
     position: relative;
-}
-
-.header-link-caveat summary::-webkit-details-marker {
-    display: none;
 }
 
 .header-link-caveat summary img {
     width: 20px;
     height: 30px;
-    padding-top: 10px;   
+    margin-bottom: 35px;
 }
 
 .speech_bubble_table {
@@ -199,7 +195,7 @@ header {
     right: 50px;
     width: 270px;
     height: 160px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-left: 20px;
 }
 
@@ -462,11 +458,7 @@ hr {
 .link-caveat summary {
     display: flex;
     justify-content: right;
-    list-style-type: none;
-}
-
-.link-caveat summary::-webkit-details-marker {
-    display: none;
+    color: transparent;
 }
 
 .link-caveat img {
@@ -478,7 +470,7 @@ hr {
     background-color: #fff;
     border: 2px solid #edf2f7;
     border-radius: 100px;
-    width: 170px;
+    min-width: 130px;
     height: 45px;
 }
 
