@@ -174,14 +174,19 @@ header {
 }
 
 .header-link-caveat summary {
-    color: transparent;
+    display: block;
     position: relative;
+}
+
+.header-link-caveat summary::-webkit-details-marker {
+    display: none;
 }
 
 .header-link-caveat summary img {
     width: 20px;
     height: 30px;
     margin-bottom: 35px;
+    margin-top: 45px;
 }
 
 .speech_bubble_table {
@@ -433,6 +438,14 @@ hr {
     cursor: pointer;
 }
 
+.link-caveat summary {
+    display: block;
+}
+
+.link-caveat summary::-webkit-details-marker {
+    display: none;
+}
+
 .link-caveat summary span {
     font-size: 15px;
     text-align: center;
@@ -456,9 +469,8 @@ hr {
 }
 
 .link-caveat summary {
-    display: flex;
+    display: block;
     justify-content: right;
-    color: transparent;
 }
 
 .link-caveat img {
@@ -584,7 +596,7 @@ hr {
 
 .discussion-text {
     color: #84888b;
-    
+
 }
 
 
@@ -1101,7 +1113,7 @@ footer {
     }
 
     .main_content_center_container {
-        width: 100%;
+        max-width: 100%;
     }
 
     .main_content_right {
@@ -1121,15 +1133,15 @@ footer {
     .heder-bottom h1 {
         font-size: 20px;
     }
-    
+
     .main_container {
         padding: 0 25px;
     }
 
     .main_content_center_container {
-        width: 100%;
+        max-width: 100%;
     }
-    
+
     .fotter-nav {
         display: flex;
         flex-wrap: wrap;
