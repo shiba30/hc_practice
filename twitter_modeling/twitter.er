@@ -1,0 +1,77 @@
+[users]
+  *id {label: "bigint, not null"}
+  email {label: "varchar, not null, uniq" }
+  phone_number {label: "varchar, not null, uniq"}
+  display_name {label: "varchar(50), not null, minlen 4, maxlen 50"}
+  self_introduction {label: "text, null"}
+  location {label: "varchar, null"}
+  website {label: "varchar, null"}
+  birth_date {label: "date, null"}
+  profile_image {label: "varchar, null"}
+  avatar_image {label: "varchar, null"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+[followers]
+*id {label: "bigint, not null"}
++user_id {label: "bigint, not null, FK(users)"}
++follower_id {label: "bigint, not null, FK(users)"}
+created_at {label: "datetime, not null"}
+updated_at {label: "datetime, not null"}
+
+[tweets]
+  *id {label: "bigint, not null"}
+  +user_id {label: "bigint, not null, FK(users)"}
+  tweet_content {label: "varchar(140), not null"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+[retweets]
+  *id {label: "bigint, not null"}
+  +user_id {label: "bigint, not null, FK(users)"}
+  +tweet_id {label: "bigint, not null, FK(tweets)"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+[likes]
+  *id {label: "bigint, not null"}
+  +user_id {label: "bigint, not null, FK(users)"}
+  +tweet_id {label: "bigint, not null, FK(tweets)"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+[messages]
+  *id {label: "bigint, not null"}
+  +sender_id {label: "bigint, not null, FK(users)"}
+  +receiver_id {label: "bigint, not null, FK(users)"}
+  message_content {label: "text, not null"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+[notifications]
+  *id {label: "bigint, not null"}
+  +user_id {label: "bigint, not null, FK(users)"}
+  notification_type {label: "varchar, not null"}
+  +related_user_id {label: "bigint, null, FK(users)"}
+  +related_tweet_id {label: "bigint, null, FK(tweets)"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+[bookmarks]
+  *id {label: "bigint, not null"}
+  +user_id {label: "bigint, not null, FK(users)"}
+  +tweet_id {label: "bigint, not null, FK(tweets)"}
+  created_at {label: "datetime, not null"}
+  updated_at {label: "datetime, not null"}
+
+users ?--* followers
+users ?--* tweets
+users ?--* retweets
+users ?--* likes
+users ?--* messages
+users ?--* notifications
+users ?--* bookmarks
+tweets ?--* retweets
+likes ?--* tweets
+notifications ?--* tweets
+bookmarks ?--* tweets
