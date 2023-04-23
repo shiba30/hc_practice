@@ -22,7 +22,7 @@ updated_at {label: "datetime, not null"}
 [tweets]
   *id {label: "bigint, not null"}
   +user_id {label: "bigint, not null, FK(users)"}
-  tweet_content {label: "varchar(140), not null"}
+  content {label: "varchar(140), not null"}
   created_at {label: "datetime, not null"}
   updated_at {label: "datetime, not null"}
 
@@ -44,7 +44,7 @@ updated_at {label: "datetime, not null"}
   *id {label: "bigint, not null"}
   +sender_id {label: "bigint, not null, FK(users)"}
   +receiver_id {label: "bigint, not null, FK(users)"}
-  message_content {label: "text, not null"}
+  content {label: "text, not null"}
   created_at {label: "datetime, not null"}
   updated_at {label: "datetime, not null"}
 
