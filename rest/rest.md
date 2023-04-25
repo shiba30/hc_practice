@@ -46,6 +46,7 @@ CRUD操作のURI、HTTPメソッドを定義
 | 操作 | URI          | HTTP method |
 |------|--------------|-------------|
 | Create | /movie      | POST        |
+| Read   | /movie      | GET         |
 | Read   | /movie/{id} | GET         |
 | Update | /movie/{id} | PUT         |
 | Delete | /movie/{id} | DELETE      |
