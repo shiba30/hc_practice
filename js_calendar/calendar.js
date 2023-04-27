@@ -44,7 +44,7 @@ function showCallender(month) {
         calendar += i.toString().padStart('2', ' ') + '  ';
 
         let currentDayOfWeek = new Date(year, month - 1, i).getDay();
-        if (currentDayOfWeek == 6) {
+        if (currentDayOfWeek === 6) {
             // 土曜日になったら、改行する
             calendar += '\n';
         }
